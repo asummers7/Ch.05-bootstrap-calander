@@ -1,8 +1,13 @@
 var day = $('#currentDay');
-var time = $('.timeblock');
-var timeBlock = $('.hour');
-console.log(timeBlock);
-console.log(time.text())
+var button = $('div[class*="saveBtn"]');
+var confirmSave = $('.container');
+var textBlock = $('textarea');
+
+
+
+
+
+
 
 function dayStamp() {
     var date = dayjs().day(0);
@@ -10,9 +15,16 @@ function dayStamp() {
     day.text(formatDate);
 }
 dayStamp();
-console.log(dayjs().hour());
-$.each(time, function(){
-    if (time.text()==dayjs().hour()) {
-        timeBlock.addClass('present');
-    }
-})
+
+button.on('click', function(){
+    var input = $('#input1').val()
+    localStorage.setItem("input1", input);
+    var message = $('<p>Saved to local Storage</p>');
+    confirmSave.prepend(message);
+});
+
+var loadedResponse = localStorage.getItem("input1");
+console.log(loadedResponse);
+textBlock.text(loadedResponse);
+
+

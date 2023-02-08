@@ -6,9 +6,6 @@
 This is a daily planner calander. Using bootstrap and jquery to implement the design and functionality of the challenge. The goal being that the textarea is dynamic with the time of the day. And use of planning the course of your day. 
 
 ## Table of Contents
-- [Ch.05-bootstrap-calander](#ch05-bootstrap-calander)
-  - [Description](#description)
-  - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)

@@ -23,7 +23,7 @@ var currentTime = dayjs().hour();
 
 
 function dayStamp() {
-    var date = dayjs().day(0);
+    var date = dayjs();
     var formatDate = dayjs(date.$d).format('dddd, MMMM DD');
     day.text(formatDate);
 }
